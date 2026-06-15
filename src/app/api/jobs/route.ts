@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { adminClient } from '@/lib/supabase/admin'
-import { razorpay } from '@/lib/razorpay'
+import { getRazorpay } from '@/lib/razorpay'
 import { JobCategory } from '@/types'
 
 const VALID_CATEGORIES: JobCategory[] = [
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
 
   const amount = parseInt(process.env.JOB_POST_PRICE || '19900')
 
-  const order = await razorpay.orders.create({
+  const order = await getRazorpay().orders.create({
     amount,
     currency: 'INR',
     receipt: `job_${user.id}_${Date.now()}`,

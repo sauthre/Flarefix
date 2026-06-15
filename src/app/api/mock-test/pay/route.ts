@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { adminClient } from '@/lib/supabase/admin'
-import { razorpay } from '@/lib/razorpay'
+import { getRazorpay } from '@/lib/razorpay'
 
 export async function POST(request: NextRequest) {
   const supabase = await createClient()
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
   const amount = parseInt(process.env.MOCK_TEST_PRICE || '3200')
 
-  const order = await razorpay.orders.create({
+  const order = await getRazorpay().orders.create({
     amount,
     currency: 'INR',
     receipt: `mock_test_${user.id}_${Date.now()}`,
