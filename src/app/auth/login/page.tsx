@@ -12,7 +12,7 @@ function LoginForm() {
   const searchParams = useSearchParams()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState(searchParams.get('error') ? 'Authentication failed. Please try again.' : '')
+  const [error, setError] = useState(searchParams.get('error') ? decodeURIComponent(searchParams.get('error') || '') : '')
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
