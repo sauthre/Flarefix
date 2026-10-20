@@ -206,41 +206,19 @@ a { color: inherit; }
   .site-header nav a { margin-left: 13px; }
 }
 
-/* v0.3 additions — logo stage, flare-in / calm-out animation, subscribe form */
-.hero { overflow: hidden; }
-.logo-stage { position: relative; width: fit-content; margin: 0 auto 18px; isolation: isolate; }
-.logo-stage::before {
-  content: ""; position: absolute; width: 230px; height: 230px; left: 50%; top: 50%;
-  margin: -115px 0 0 -115px; border-radius: 50%; z-index: -2;
-  background: radial-gradient(circle, rgba(233, 185, 73, .20) 0%, rgba(233, 185, 73, .06) 55%, transparent 72%);
-  animation: logopulse 4.5s ease-in-out infinite;
+/* v0.3 additions — logo glow animation + subscribe form */
+.logo-wrap { position: relative; width: fit-content; margin: 0 auto 18px; isolation: isolate; }
+.logo-wrap .hero-logo { margin: 0; animation: logobreathe 3.6s ease-in-out infinite; }
+.logo-wrap::after {
+  content: ""; position: absolute; inset: -16px; border-radius: 50%; z-index: -1;
+  background: radial-gradient(circle, rgba(225, 29, 42, .38) 0%, rgba(233, 185, 73, .20) 48%, transparent 70%);
+  animation: logopulse 3.6s ease-in-out infinite;
 }
-.logo-stage .hero-logo { margin: 0; animation: logobreathe 4.5s ease-in-out infinite; }
-.logo-fx {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: min(620px, 96vw); height: auto; z-index: -1; overflow: visible; pointer-events: none;
-}
-.fx-chaos polyline { animation: chaosmove 1.15s linear infinite; }
-.fx-chaos polyline:nth-child(2) { animation-duration: .85s; animation-delay: .15s; }
-.fx-chaos polyline:nth-child(3) { animation-duration: 1.45s; animation-delay: .3s; }
-@keyframes chaosmove {
-  0% { transform: translateX(-10px); opacity: .5; }
-  30% { transform: translateX(2px) translateY(-2px); opacity: 1; }
-  55% { transform: translateX(9px) translateY(1px); opacity: .8; }
-  80% { transform: translateX(4px) translateY(-1px); opacity: 1; }
-  100% { transform: translateX(14px); opacity: .45; }
-}
-.fx-calm path { animation: calmdrift 6s ease-in-out infinite; }
-.fx-calm path:nth-child(2) { animation-duration: 7.5s; animation-delay: 1.2s; }
-.fx-calm path:nth-child(3) { animation-duration: 8.5s; animation-delay: 2.2s; }
-@keyframes calmdrift { 0%, 100% { transform: translateX(0); opacity: .65; } 50% { transform: translateX(10px); opacity: 1; } }
-@keyframes logopulse { 0%, 100% { transform: scale(.96); opacity: .6; } 50% { transform: scale(1.07); opacity: .95; } }
-@keyframes logobreathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.015); } }
+@keyframes logopulse { 0%, 100% { transform: scale(.95); opacity: .5; } 50% { transform: scale(1.09); opacity: .95; } }
+@keyframes logobreathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
 @media (prefers-reduced-motion: reduce) {
-  .logo-stage .hero-logo, .logo-stage::before, .fx-chaos polyline, .fx-calm path { animation: none; }
+  .logo-wrap .hero-logo, .logo-wrap::after { animation: none; }
 }
-.site-header .wordmark { display: inline-flex; align-items: center; gap: 10px; }
-.brand-logo { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
 .subscribe-card {
   background: var(--panel); border: 1px solid var(--gold); border-radius: 18px; padding: 28px;
 }
