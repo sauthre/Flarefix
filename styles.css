@@ -205,3 +205,34 @@ a { color: inherit; }
   .platform-grid, .founder-grid { grid-template-columns: 1fr; }
   .site-header nav a { margin-left: 13px; }
 }
+
+/* v0.3 additions — logo glow animation + subscribe form */
+.logo-wrap { position: relative; width: fit-content; margin: 0 auto 18px; isolation: isolate; }
+.logo-wrap .hero-logo { margin: 0; animation: logobreathe 3.6s ease-in-out infinite; }
+.logo-wrap::after {
+  content: ""; position: absolute; inset: -16px; border-radius: 50%; z-index: -1;
+  background: radial-gradient(circle, rgba(225, 29, 42, .38) 0%, rgba(233, 185, 73, .20) 48%, transparent 70%);
+  animation: logopulse 3.6s ease-in-out infinite;
+}
+@keyframes logopulse { 0%, 100% { transform: scale(.95); opacity: .5; } 50% { transform: scale(1.09); opacity: .95; } }
+@keyframes logobreathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+@media (prefers-reduced-motion: reduce) {
+  .logo-wrap .hero-logo, .logo-wrap::after { animation: none; }
+}
+.subscribe-card {
+  background: var(--panel); border: 1px solid var(--gold); border-radius: 18px; padding: 28px;
+}
+.subscribe-text, .subscribe-future { color: var(--muted); font-size: 16px; margin-bottom: 12px; max-width: 720px; }
+.subscribe-text strong, .subscribe-future strong { color: var(--text); }
+.subscribe-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; max-width: 720px; }
+.subscribe-form input {
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px;
+  padding: 13px 15px; color: var(--text); font-size: 15px; width: 100%;
+}
+.subscribe-form input::placeholder { color: var(--muted); }
+.subscribe-form input:focus { outline: 2px solid var(--gold); border-color: transparent; }
+.subscribe-form .field-wide { grid-column: 1 / -1; }
+.subscribe-form button { cursor: pointer; font-size: 16px; }
+.hidden-field { display: none; }
+.subscribe-note { color: var(--muted); font-size: 13px; margin-top: 14px; }
+@media (max-width: 720px) { .subscribe-form { grid-template-columns: 1fr; } }
