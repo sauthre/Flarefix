@@ -59,7 +59,7 @@
 
     <div class="donate-box">
       <h2>How to Support</h2>
-      <p>The contribution channel (UPI) will be announced here very soon. Until then — listen to
+      <p id="donate-rail">The contribution channel (UPI) will be announced here very soon. Until then — listen to
       Flarefix, share it, and take it to your people. Your time and your voice are
       contributions too.</p>
       <p class="donate-thanks">Thank you — your trust is our first capital.</p>
@@ -74,5 +74,24 @@
   <p class="footer-small">flarefix.com &nbsp;•&nbsp; © 2026 Flarefix. All rights reserved.</p>
 </footer>
 
+<script>
+(function () {
+  var SB_URL = "https://hivjltooipxlybgivbox.supabase.co";
+  var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpdmpsdG9vaXB4bHliZ2l2Ym94Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1OTM2OTQsImV4cCI6MjEwODE2OTY5NH0.FtpEtnUIBUtxq_KQKO_XUZo3bjml9Mt-wZPCNYiYhls";
+  fetch(SB_URL + "/rest/v1/settings?select=key,value", {
+    headers: { "apikey": SB_KEY, "Authorization": "Bearer " + SB_KEY }
+  }).then(function (r) { return r.json(); }).then(function (rows) {
+    var s = {};
+    (rows || []).forEach(function (x) { s[x.key] = x.value; });
+    if (s.donation_enabled === "true" && s.donation_upi) {
+      var label = s.donation_label || "Support Flarefix on UPI";
+      document.getElementById("donate-rail").innerHTML =
+        label + ' — send any amount to:' +
+        '<span class="upi-box">' + s.donation_upi.replace(/</g, "&lt;") + "</span>" +
+        "Open any UPI app and pay to this id. The QR code joins here soon. Every rupee keeps Flarefix free — and unbought.";
+    }
+  }).catch(function () { /* placeholder stays */ });
+})();
+</script>
 </body>
 </html>

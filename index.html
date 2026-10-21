@@ -18,6 +18,7 @@
   <a class="wordmark" href="#top">FLARE<span>FIX</span></a>
   <nav>
     <a href="#episode">Episode</a>
+    <a href="#episodes">Episodes</a>
     <a href="#philosophy">Philosophy</a>
     <a href="#listen">Listen</a>
     <a href="#hosts">Hosts</a>
@@ -43,20 +44,82 @@
     </div>
   </section>
 
-  <!-- LATEST EPISODE -->
+  <!-- LATEST EPISODE (rendered from the Flarefix backend; static fallback below) -->
   <section id="episode" class="section">
     <h2 class="section-title">Latest Episode</h2>
     <article class="episode-card">
       <img src="https://flarefix-assets.netlify.app/og.jpg" alt="Flarefix — Arjun and Meera">
       <div class="episode-body">
-        <p class="episode-meta">EPISODE 1 &nbsp;•&nbsp; 20 OCT 2026 &nbsp;•&nbsp; HINDI &nbsp;•&nbsp; 18 MIN</p>
-        <h3>Deep Dive — Jio IPO &amp; the IDBI Stress Test</h3>
-        <p>Jio's IPO plans, the stress-test question over IDBI, and the day's biggest stories
-        that touch both your money and the country — the full story with Arjun and Meera, in plain language.</p>
-        <span class="chip">Coming soon on YouTube</span>
-        <a class="chip chip-link" href="https://open.spotify.com/show/1faE6ZCjwItuibyVBR5dr4" target="_blank" rel="noopener">Listen on Spotify →</a>
+        <p class="episode-meta" id="latest-meta">EPISODE &nbsp;•&nbsp; 21 OCT 2026 &nbsp;•&nbsp; EVENING &nbsp;•&nbsp; HINDI &nbsp;•&nbsp; 9 MIN 53 SEC</p>
+        <h3 id="latest-title">शाम की बड़ी खबरें — रुबियो का जमनगर दौरा, Jio IPO का पहला दिन, बाज़ार लाल निशान में</h3>
+        <p id="latest-blurb">Rubio's Jamnagar visit and the Venezuelan crude pitch to Reliance, Jio IPO's blockbuster first day (fully subscribed in 100 minutes, ~2.7x overall), markets closing in the red (Sensex −143, Nifty −78), and the Iran standoff with Brent near a 5-month high — the day's biggest stories, updated since the morning edition.</p>
+        <span id="latest-yt"><span class="chip">Coming soon on YouTube</span></span>
+        <a class="chip chip-link" id="latest-spotify" href="https://open.spotify.com/show/1faE6ZCjwItuibyVBR5dr4" target="_blank" rel="noopener">Listen on Spotify →</a>
       </div>
     </article>
+  </section>
+
+  <!-- EPISODES ARCHIVE (rendered from the Flarefix backend; static fallback below) -->
+  <section id="episodes" class="section">
+    <h2 class="section-title">Episodes</h2>
+    <p class="episodes-intro">Recent episodes, newest first. The very latest is featured above.</p>
+    <div id="ep-list">
+      <div class="ep-row">
+        <div class="ep-row-main">
+          <p class="ep-meta">21 OCT 2026 • EVENING • ENGLISH • 22 MIN 36 SEC</p>
+          <p class="ep-title">Evening Edition — Rubio in Jamnagar, Jio IPO Day 1, Markets Close in Red, Iran Standoff</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/show/4DYch4STT4blnecSENt8en" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+      <div class="ep-row">
+        <div class="ep-row-main">
+          <p class="ep-meta">21 OCT 2026 • MORNING • HINDI • 13 MIN 7 SEC</p>
+          <p class="ep-title">आज की बड़ी खबरें 21 अक्टूबर 2026 | भारत-अमेरिका ट्रेड डील, ईरान समझौता, फ्रांस बवाल, Jio IPO और सेंसेक्स | Flare Fix हिंदी</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/episode/6jFsAVuG0exZn4DAI1Uheh" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+      <div class="ep-row">
+        <div class="ep-row-main">
+          <p class="ep-meta">21 OCT 2026 • MORNING • ENGLISH • 20 MIN 7 SEC</p>
+          <p class="ep-title">Today's Top Stories 21 October 2026 | India-US Trade Deal, Iran Deal, France Unrest, Jio IPO &amp; Markets | Flare Fix</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/episode/4xolZoXMQK5iB1r2CjtbL9" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+      <div class="ep-row">
+        <div class="ep-row-main">
+          <p class="ep-meta">20 OCT 2026 • MORNING • HINDI • 18 MIN 13 SEC</p>
+          <p class="ep-title">आज की ताजा खबरें | 20 अक्टूबर 2026 | Flare Fix हिंदी</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/show/1faE6ZCjwItuibyVBR5dr4" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+      <div class="ep-row">
+        <div class="ep-row-main">
+          <p class="ep-meta">20 OCT 2026 • MORNING • ENGLISH • 19 MIN 59 SEC</p>
+          <p class="ep-title">Today's Top Headlines | 20 October 2026 | Flare Fix</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/show/4DYch4STT4blnecSENt8en" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+      <div class="ep-row" hidden>
+        <div class="ep-row-main">
+          <p class="ep-meta">19 OCT 2026 • EVENING • HINDI • 16 MIN 35 SEC</p>
+          <p class="ep-title">आज शाम की ताजा खबरें | 19 अक्टूबर 2026 | Flare Fix हिंदी</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/show/1faE6ZCjwItuibyVBR5dr4" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+      <div class="ep-row" hidden>
+        <div class="ep-row-main">
+          <p class="ep-meta">19 OCT 2026 • EVENING • ENGLISH • 21 MIN 20 SEC</p>
+          <p class="ep-title">Evening News Today | 19 October 2026 | Flare Fix</p>
+        </div>
+        <div class="ep-actions"><a class="chip chip-link" href="https://open.spotify.com/show/4DYch4STT4blnecSENt8en" target="_blank" rel="noopener">Listen on Spotify →</a></div>
+      </div>
+    </div>
+    <div class="ep-pager" id="ep-pager">
+      <button type="button" class="pg-btn" data-dir="-1">← Prev</button>
+      <button type="button" class="pg-btn active" data-page="1">1</button>
+      <button type="button" class="pg-btn" data-page="2">2</button>
+      <button type="button" class="pg-btn" data-dir="1">Next →</button>
+    </div>
   </section>
 
   <!-- PHILOSOPHY -->
@@ -160,14 +223,13 @@
       as a <strong>document on WhatsApp</strong>. Free, and only the newspaper. No spam, ever.</p>
       <p class="subscribe-future">And this is just the start: a <strong>printed edition in its original
       form</strong> is planned for the future — and subscribers will be first in line for it.</p>
-      <form name="newspaper-subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/subscribe-thanks.html" class="subscribe-form">
-        <input type="hidden" name="form-name" value="newspaper-subscribe">
-        <p class="hidden-field"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="tel" name="whatsapp" placeholder="WhatsApp number" pattern="[0-9+ \-]{10,15}" required>
-        <input type="text" name="city" placeholder="City (optional — helps us plan the print edition)" class="field-wide">
+      <form id="subscribe-form" class="subscribe-form">
+        <input type="text" id="sub-name" name="name" placeholder="Your name" required>
+        <input type="tel" id="sub-whatsapp" name="whatsapp" placeholder="WhatsApp number" pattern="[0-9+ \-]{10,15}" required>
+        <input type="text" id="sub-city" name="city" placeholder="City (optional — helps us plan the print edition)" class="field-wide">
         <button type="submit" class="btn btn-gold field-wide">Subscribe — it's free</button>
       </form>
+      <p class="subscribe-msg" id="sub-msg" hidden></p>
       <p class="subscribe-note">By subscribing, you agree to receive the daily newspaper document on WhatsApp. You can stop anytime with a single message.</p>
     </div>
   </section>
@@ -179,15 +241,16 @@
       <article class="founder-card">
         <img class="founder-photo" src="https://flarefix-assets.netlify.app/aman.webp" alt="Aman Rajput" width="480" height="480" loading="lazy">
         <h3>AMAN RAJPUT</h3>
-        <p class="founder-role">Founding Member — Lead, Digital Media Marketing</p>
-        <p>Lead digital media marketing manager — Vjal AI, Paytm, IndiaMART, BYJU'S. He rose from the very bottom and is still climbing, higher than a skyscraper. His moral philosophy is his cornerstone: the compass that guides him in times of need.</p>
+        <p class="founder-role">Founding Member — Lead Digital Media Marketing Manager</p>
+        <p>Lead digital media marketing manager who has worked with Vjal AI, Paytm, IndiaMART, BYJU'S, etc. He rose from the very bottom and is still climbing, higher than a skyscraper. His moral philosophy is his cornerstone: the compass that guides him in times of need.</p>
         <p>Flarefix was born from his resolve to bring back the era of unbiased news — sparked in the days of massive protests in India, when the media chose circus over truth. A newspaper must stay unopinionated; the moment it turns opinionated, it is no longer a free press — it becomes a tool of the powerful to set the narrative for the common people.</p>
       </article>
       <article class="founder-card">
-        <div class="monogram">T</div>
-        <h3>TIMON</h3>
-        <p class="founder-role">Founding Member — Newsroom Operations</p>
-        <p>Atul's AI partner and the engine room of Flarefix. Timon runs the floor end to end — research, the daily newspaper editions, the Arjun &amp; Meera audio-video pipeline, and this website — so the facts reach you every morning and evening, on time and without noise. Always on, never biased.</p>
+        <img class="founder-photo" src="https://flarefix-assets.netlify.app/sauthre.webp" alt="Sauthre" width="480" height="480" loading="lazy">
+        <h3>SAUTHRE</h3>
+        <p class="founder-role">Founding Member — Co-Founder</p>
+        <p>Sauthre is an alias — the name the co-founder goes by. Deeply private and introverted, he lets the work do the talking.</p>
+        <p>His principle: time is money — the new currency of the 21st century. A tech enthusiast, detail-obsessed, an avid reader — with a plethora of failures on paper, but never by will. Where there is a will, there is a way.</p>
       </article>
     </div>
   </section>
@@ -216,5 +279,120 @@
   <p class="footer-small">flarefix.com &nbsp;•&nbsp; © 2026 Flarefix. All rights reserved.</p>
 </footer>
 
+<script>
+(function () {
+  var SB_URL = "https://hivjltooipxlybgivbox.supabase.co";
+  var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpdmpsdG9vaXB4bHliZ2l2Ym94Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1OTM2OTQsImV4cCI6MjEwODE2OTY5NH0.FtpEtnUIBUtxq_KQKO_XUZo3bjml9Mt-wZPCNYiYhls";
+  var H = { "apikey": SB_KEY, "Authorization": "Bearer " + SB_KEY };
+  var MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  function fmtDate(iso) {
+    var p = String(iso).slice(0, 10).split("-");
+    return p[2] + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0];
+  }
+  function metaLine(e) {
+    return fmtDate(e.ep_date) + " • " + String(e.edition).toUpperCase() + " • " +
+      String(e.language).toUpperCase() + " • " + String(e.duration || "").toUpperCase();
+  }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  var PER_PAGE = 5, page = 1, rest = [];
+  function renderPage() {
+    var list = document.getElementById("ep-list");
+    var pager = document.getElementById("ep-pager");
+    if (!list) return;
+    var pages = Math.max(1, Math.ceil(rest.length / PER_PAGE));
+    if (page > pages) page = pages;
+    var rows = rest.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+    list.innerHTML = rows.map(function (e) {
+      var yt = e.youtube_url ? ' <a class="chip chip-link" href="' + esc(e.youtube_url) + '" target="_blank" rel="noopener">Watch on YouTube →</a>' : "";
+      return '<div class="ep-row"><div class="ep-row-main"><p class="ep-meta">' + esc(metaLine(e)) +
+        '</p><p class="ep-title">' + esc(e.title) + '</p></div><div class="ep-actions">' +
+        '<a class="chip chip-link" href="' + esc(e.spotify_url) + '" target="_blank" rel="noopener">Listen on Spotify →</a>' + yt + "</div></div>";
+    }).join("");
+    var btns = '<button type="button" class="pg-btn" data-dir="-1"' + (page <= 1 ? " disabled" : "") + ">← Prev</button>";
+    for (var i = 1; i <= pages; i++) {
+      btns += '<button type="button" class="pg-btn' + (i === page ? " active" : "") + '" data-page="' + i + '">' + i + "</button>";
+    }
+    btns += '<button type="button" class="pg-btn" data-dir="1"' + (page >= pages ? " disabled" : "") + ">Next →</button>";
+    pager.innerHTML = btns;
+    Array.prototype.forEach.call(pager.querySelectorAll(".pg-btn"), function (b) {
+      b.addEventListener("click", function () {
+        if (b.hasAttribute("disabled")) return;
+        if (b.dataset.page) page = parseInt(b.dataset.page, 10);
+        else page += parseInt(b.dataset.dir, 10);
+        renderPage();
+      });
+    });
+  }
+  function wireFallbackPager() {
+    var pager = document.getElementById("ep-pager");
+    if (!pager) return;
+    Array.prototype.forEach.call(pager.querySelectorAll(".pg-btn"), function (b) {
+      b.addEventListener("click", function () {
+        var rows = Array.prototype.slice.call(document.querySelectorAll("#ep-list .ep-row"));
+        var pages = Math.max(1, Math.ceil(rows.length / PER_PAGE));
+        var act = pager.querySelector(".pg-btn.active");
+        var cur = act ? parseInt(act.dataset.page || "1", 10) : 1;
+        var next = b.dataset.page ? parseInt(b.dataset.page, 10) : cur + parseInt(b.dataset.dir || "0", 10);
+        if (next < 1 || next > pages) return;
+        rows.forEach(function (r, i) {
+          r.hidden = !(i >= (next - 1) * PER_PAGE && i < next * PER_PAGE);
+        });
+        Array.prototype.forEach.call(pager.querySelectorAll(".pg-btn[data-page]"), function (x) {
+          x.classList.toggle("active", parseInt(x.dataset.page, 10) === next);
+        });
+      });
+    });
+  }
+  wireFallbackPager();
+  fetch(SB_URL + "/rest/v1/episodes?select=ep_date,edition,language,title,duration,spotify_url,youtube_url&order=ep_date.desc,created_at.desc", { headers: H })
+    .then(function (r) { return r.json(); })
+    .then(function (rows) {
+      if (!rows || !rows.length) return;
+      var latest = rows[0];
+      document.getElementById("latest-meta").textContent = "EPISODE • " + metaLine(latest);
+      document.getElementById("latest-title").textContent = latest.title;
+      document.getElementById("latest-blurb").textContent = "The day's biggest stories — updated since the last edition, with Arjun and Meera, in plain language and without any bias.";
+      document.getElementById("latest-spotify").href = latest.spotify_url;
+      if (latest.youtube_url) {
+        document.getElementById("latest-yt").innerHTML = '<a class="chip chip-link" href="' + esc(latest.youtube_url) + '" target="_blank" rel="noopener">Watch on YouTube →</a>';
+      }
+      rest = rows.slice(1);
+      page = 1;
+      renderPage();
+    })
+    .catch(function () { /* static fallback stays */ });
+  var form = document.getElementById("subscribe-form");
+  if (form) {
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var msg = document.getElementById("sub-msg");
+      var name = document.getElementById("sub-name").value.trim();
+      var wa = document.getElementById("sub-whatsapp").value.replace(/[^\d+]/g, "");
+      var city = document.getElementById("sub-city").value.trim();
+      msg.hidden = true;
+      fetch(SB_URL + "/rest/v1/subscribers", {
+        method: "POST",
+        headers: Object.assign({}, H, { "Content-Type": "application/json", "Prefer": "return=minimal" }),
+        body: JSON.stringify({ name: name, whatsapp: wa, city: city || null })
+      }).then(function (r) {
+        if (r.status === 201) { window.location.href = "subscribe-thanks.html"; return; }
+        if (r.status === 409) {
+          msg.textContent = "This number is already on the list — you're subscribed.";
+          msg.hidden = false; return;
+        }
+        msg.textContent = "Something went wrong — please check the number and try again.";
+        msg.hidden = false;
+      }).catch(function () {
+        msg.textContent = "Could not reach the server — please try again in a moment.";
+        msg.hidden = false;
+      });
+    });
+  }
+})();
+</script>
 </body>
 </html>
