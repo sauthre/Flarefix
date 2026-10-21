@@ -172,6 +172,11 @@ a { color: inherit; }
   font-size: 34px; font-weight: 900; letter-spacing: 1px; color: var(--gold);
   border: 2px solid var(--gold); background: var(--panel-2);
 }
+.founder-photo {
+  width: 92px; height: 92px; border-radius: 50%; margin: 0 auto 14px;
+  display: block; object-fit: cover;
+  border: 2px solid var(--gold); background: var(--panel-2);
+}
 .founder-card h3 { letter-spacing: 2.5px; font-size: 21px; }
 .founder-role { color: var(--gold); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 2px 0 10px; }
 .founder-card p { color: var(--muted); font-size: 15px; }
