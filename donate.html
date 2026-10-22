@@ -74,6 +74,7 @@
   <p class="footer-small">flarefix.com &nbsp;•&nbsp; © 2026 Flarefix. All rights reserved.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 (function () {
   var SB_URL = "https://hivjltooipxlybgivbox.supabase.co";
@@ -86,9 +87,13 @@
     if (s.donation_enabled === "true" && s.donation_upi) {
       var label = s.donation_label || "Support Flarefix on UPI";
       document.getElementById("donate-rail").innerHTML =
-        label + ' — send any amount to:' +
+        label + ' — scan the QR with any UPI app, or pay to this id:' +
         '<span class="upi-box">' + s.donation_upi.replace(/</g, "&lt;") + "</span>" +
-        "Open any UPI app and pay to this id. The QR code joins here soon. Every rupee keeps Flarefix free — and unbought.";
+        '<span id="donate-qr" style="display:inline-block;background:#fff;padding:12px;border-radius:12px;margin:10px 0"></span><br>' +
+        "Every rupee keeps Flarefix free — and unbought.";
+      if (typeof QRCode !== "undefined") {
+        new QRCode(document.getElementById("donate-qr"), { text: "upi://pay?pa=" + s.donation_upi + "&pn=Flarefix&cu=INR", width: 210, height: 210, correctLevel: QRCode.CorrectLevel.M });
+      }
     }
   }).catch(function () { /* placeholder stays */ });
 })();
